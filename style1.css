@@ -24,6 +24,12 @@ body{
 }
 .Sign-In:hover{
     background-color: #D4AF37;
+    
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 a{
     text-decoration: none;
@@ -103,4 +109,5 @@ h2{
     padding: 10px 20px ;
     text-decoration: none;
     border-radius: 500px;
+
 }
