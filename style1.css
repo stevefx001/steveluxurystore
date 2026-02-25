@@ -1,18 +1,19 @@
-
 body{
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
     background-image: linear-gradient(rgb(42, 41, 41) , rgb(33, 33, 33) 50% ); 
-     color: #D4AF37;
+    color: #D4AF37;
 }
+
 .nav{
     box-shadow: inset 1px 7px 20px #ffffff;
-    box-sizing:  border-box 20px;
+    box-sizing: border-box;
     padding: 20px 80px;
     word-spacing: 50px;
     height: 40px;
 }
+
 .Sign-In{
     position: relative;
     right: -430px;
@@ -22,15 +23,25 @@ body{
     font-size: 15px;
     font-weight: bold;
 }
+
 .Sign-In:hover{
     background-color: #D4AF37;
-    
 }
+
+/* LOGO IMAGES - Only for logo, 100px x 100px */
+.logo-container img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+/* ALL OTHER IMAGES - Responsive */
 img {
     max-width: 100%;
     height: auto;
     display: block;
 }
+
 a{
     text-decoration: none;
     color: gold;
@@ -38,34 +49,29 @@ a{
 }
 
 #title{
-margin-top: 20px;
-}
- 
-img{
-    width: 100px;   /*set equal width and height */
-    height: 100px;
-    object-fit: cover;     /*prevent stretching*/
+    margin-top: 20px;
 }
 
 .logo-container{
     display: flex;
-    justify-content: center;    /*horizontal center*/
-    align-items: center;        /*vertical center*/
+    justify-content: center;
+    align-items: center;
 }
+
 h1{
     text-align: center;
     word-spacing: 0.5em;
 }
+
 .product-card img{
-width: 100%;
-height: 350px;
-object-fit: cover;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
 }
 
 .product-container {
-
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
     padding: 40px;
 }
@@ -82,21 +88,25 @@ object-fit: cover;
 .product-card:hover {
     transform: translateY(-5px);
 }
+
 .hero-btn{
     border-radius: 15px;
     justify-content: center;
     align-items: center;
     margin-left: 45%;
-    padding: 20px 40px 20px 40px ;
+    padding: 20px 40px;
 }
+
 .hero-btn:hover{
     background-color: gold;
 }
+
 h2{
     text-align: center;
     font-size: 50px;
     font-family: cursive;
 }
+
 .prgh{
     text-align: center;
     font-size: 30px;
@@ -106,8 +116,32 @@ h2{
 .whatsapp-btn{
     background-color: #D4AF37;
     color: #ffffff;
-    padding: 10px 20px ;
+    padding: 10px 20px;
     text-decoration: none;
     border-radius: 500px;
+}
 
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    .product-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        padding: 20px;
+    }
+    
+    .nav {
+        padding: 20px;
+        word-spacing: 10px;
+    }
+    
+    .Sign-In {
+        right: 0;
+    }
+    
+    h2 {
+        font-size: 30px;
+    }
+    
+    .prgh {
+        font-size: 18px;
+    }
 }
