@@ -1,0 +1,33 @@
+body{
+    min-height: 60%;
+    background-image: linear-gradient(rgb(42, 41, 41) , rgb(33, 33, 33) ); 
+    display: flex;
+    align-items: center;
+    margin: 0%;
+    font-family: Arial, sans-serif;
+
+}
+
+.login-box{
+    background-color: rgb(139, 118, 0);
+    justify-content: center;
+    padding: 30px;
+    width: 300px;
+    margin-left: 450px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    text-align: center;
+    justify-self: center;
+    display: block;
+    margin-top: 150px;
+}
+
+.login-box input{
+     width: 90%;
+     padding: 8px;
+     margin: 8px 0;
+}
+.login-box button {
+    padding: 8px 20px;
+    cursor: pointer;
+}
